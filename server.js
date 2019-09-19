@@ -1,9 +1,17 @@
+// PACKAGES
 const express = require('express');
+const mongoose = require('mongoose');
+const cors = require('cors');
+
+// MODULES
+const config = require('./config');
 
 const server = express();
 
-const PORT = 7001;
+server.use(cors());
+server.use(express.json());
+server.options('*', cors());
 
-server.listen(PORT, () => {
+server.listen(config.PORT, () => {
   console.log('server is running');
 })
