@@ -14,7 +14,6 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [routerMiddleware(history), sagaMiddleware]
 
-
 export const store = createStore(
   rootReducer(history),
   initialState,
