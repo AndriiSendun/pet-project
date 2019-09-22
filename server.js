@@ -5,7 +5,6 @@ const cors = require('cors');
 
 // MODULES
 const config = require('./config');
-const USER_ROUTER = require('./api/user');
 
 const server = express();
 const MONGO_CONFIG = {
@@ -23,8 +22,7 @@ server.use(cors());
 server.use(express.json());
 server.options('*', cors());
 
-server.use(USER_ROUTER.URL, USER_ROUTER.handlers.POST.bind(this));
-server.use(USER_ROUTER.URL, USER_ROUTER.handlers.POST_AUTH.bind(this));
+server.use('/api/users', require('./api/users'));
 
 server.listen(config.PORT, () => {
   console.log('server is running');
