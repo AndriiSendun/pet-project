@@ -14,10 +14,15 @@ const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [routerMiddleware(history), sagaMiddleware]
 
-export const store = createStore(
+const store = createStore(
   rootReducer(history),
   initialState,
   compose(applyMiddleware(...middleware), composeWithDevTools())
 );
 
 sagaMiddleware.run(rootSaga);
+
+export {
+  store,
+  history,
+}

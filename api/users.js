@@ -5,7 +5,7 @@ const router = express.Router();
 
 const User = require('../models/user.model');
 
-router.post('/', (req, res) => {
+router.post('/log-in', (req, res) => {
   const { email, password} = req.body;
 
   User
