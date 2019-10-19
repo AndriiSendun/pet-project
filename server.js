@@ -11,6 +11,7 @@ const MONGO_CONFIG = {
   useNewUrlParser: true,
   useCreateIndex: true,
   useUnifiedTopology: true,
+  dbName: 'test',
 }
 
 mongoose

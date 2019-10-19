@@ -1,6 +1,6 @@
 const config = {
   PORT: 7001,
-  MONGO_DB: 'mongodb+srv://Andrii:MongoUI1234567@cluster0-bbqzl.mongodb.net/test?retryWrites=true&w=majority',
+  MONGO_DB: 'mongodb+srv://Andrii:MongoUI1234567@cluster0-dhtkx.mongodb.net/test',
   BASE_API_DOMAIN: 'api',
 }
 
